@@ -1,0 +1,52 @@
+{
+  "DataSources": [
+    {
+      "Type": "ServiceInfo",
+      "Name": "EquipmentRequest",
+      "ServiceKind": "AddinWadl",
+      "WadlMetadata": {
+        "WadlXml": "<application xmlns:xml=\"http://www.w3.org/XML/1998/namespace\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:service=\"https://unitedstates-002.azure-apim.net/apim/logicflows\" xmlns:siena=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\" siena:serviceId=\"EquipmentRequest\" xmlns=\"http://wadl.dev.java.net/2009/02\">\r\n  <doc title=\"EquipmentRequest\" />\r\n  <grammars>\r\n    <jsonTypes targetNamespace=\"https://unitedstates-002.azure-apim.net/apim/logicflows\" xmlns=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\">\r\n      <string name=\"ManualTriggerInput_Sendanemail_ux28_V2_ux29__Body_def\" />\r\n      <string name=\"ManualTriggerInput_Sendanemail_ux28_V2_ux29__Body_1_def\" />\r\n      <string name=\"ManualTriggerInput_Sendanemail_ux28_V2_ux29__Body_2_def\" />\r\n      <object name=\"ManualTriggerInput\">\r\n        <property name=\"Sendanemail(V2)_Body\" type=\"string\" />\r\n        <property name=\"Sendanemail(V2)_Body_1\" type=\"string\" />\r\n        <property name=\"Sendanemail(V2)_Body_2\" type=\"string\" />\r\n      </object>\r\n    </jsonTypes>\r\n  </grammars>\r\n  <resources siena:authenticationProviderHref=\"#PowerAppAuth\" base=\"https://unitedstates-002.azure-apim.net/apim/logicflows\">\r\n    <resource path=\"/{connectionId}/triggers/manual/run\">\r\n      <param style=\"template\" name=\"connectionId\" type=\"xs:string\" required=\"true\" />\r\n      <method siena:requiresAuthentication=\"true\" name=\"POST\" id=\"Run\">\r\n        <doc title=\"Runs a logic flow trigger.\" />\r\n        <request>\r\n          <param style=\"query\" name=\"api-version\" type=\"xs:string\" required=\"true\" fixed=\"2015-02-01-preview\">\r\n            <doc title=\"The api version\" />\r\n          </param>\r\n          <representation mediaType=\"application/json\">\r\n            <param style=\"plain\" name=\"Sendanemail(V2)_Body\" path=\"/Sendanemail(V2)_Body\" type=\"xs:string\" required=\"true\" />\r\n            <param style=\"plain\" name=\"Sendanemail(V2)_Body_1\" path=\"/Sendanemail(V2)_Body_1\" type=\"xs:string\" required=\"true\" />\r\n            <param style=\"plain\" name=\"Sendanemail(V2)_Body_2\" path=\"/Sendanemail(V2)_Body_2\" type=\"xs:string\" required=\"true\" />\r\n          </representation>\r\n        </request>\r\n      </method>\r\n    </resource>\r\n  </resources>\r\n  <authenticationProviders xmlns=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\">\r\n    <connectionProvider id=\"PowerAppAuth\" siena:connectionProviderId=\"logicflows\" />\r\n  </authenticationProviders>\r\n  <template xmlns=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\">\r\n    <variable name=\"connectionId\">\r\n      <modifyParams style=\"template\" name=\"connectionId\" attribute=\"fixed\" />\r\n    </variable>\r\n  </template>\r\n</application>"
+      },
+      "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+      "AddinConnectorId": "8ead8b92-ebce-4236-bf50-7e0d94dc447b"
+    },
+    {
+      "Type": "ServiceInfo",
+      "Name": "PowerApp->Sendanemail(V2)_1",
+      "ServiceKind": "AddinWadl",
+      "WadlMetadata": {
+        "WadlXml": "<application xmlns:xml=\"http://www.w3.org/XML/1998/namespace\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:service=\"https://unitedstates-002.azure-apim.net/apim/logicflows\" xmlns:siena=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\" siena:serviceId=\"PowerApp-&gt;Sendanemail(V2)\" xmlns=\"http://wadl.dev.java.net/2009/02\">\r\n  <doc title=\"PowerApp -&gt; Send an email (V2)\" />\r\n  <grammars>\r\n    <jsonTypes targetNamespace=\"https://unitedstates-002.azure-apim.net/apim/logicflows\" xmlns=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\">\r\n      <object name=\"ManualTriggerInput\" />\r\n    </jsonTypes>\r\n  </grammars>\r\n  <resources siena:authenticationProviderHref=\"#PowerAppAuth\" base=\"https://unitedstates-002.azure-apim.net/apim/logicflows\">\r\n    <resource path=\"/{connectionId}/triggers/manual/run\">\r\n      <param style=\"template\" name=\"connectionId\" type=\"xs:string\" required=\"true\" />\r\n      <method siena:requiresAuthentication=\"true\" name=\"POST\" id=\"Run\">\r\n        <doc title=\"Runs a logic flow trigger.\" />\r\n        <request>\r\n          <param style=\"query\" name=\"api-version\" type=\"xs:string\" required=\"true\" fixed=\"2015-02-01-preview\">\r\n            <doc title=\"The api version\" />\r\n          </param>\r\n          <representation mediaType=\"application/json\" />\r\n        </request>\r\n      </method>\r\n    </resource>\r\n  </resources>\r\n  <authenticationProviders xmlns=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\">\r\n    <connectionProvider id=\"PowerAppAuth\" siena:connectionProviderId=\"logicflows\" />\r\n  </authenticationProviders>\r\n  <template xmlns=\"http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11\">\r\n    <variable name=\"connectionId\">\r\n      <modifyParams style=\"template\" name=\"connectionId\" attribute=\"fixed\" />\r\n    </variable>\r\n  </template>\r\n</application>"
+      },
+      "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+      "AddinConnectorId": "8ead8b92-ebce-4236-bf50-7e0d94dc447b"
+    },
+    {
+      "Name": "CustomGallerySample",
+      "Schema": "*[SampleHeading:s, SampleImage:i, SampleText:s]",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "StaticDataSourceInfo",
+      "OriginalSchema": "*[SampleHeading:s, SampleImage:i, SampleText:s]",
+      "Data": "[{\"SampleHeading\":\"Lorem ipsum 1\",\"SampleImage\":\"/ctrllib/image/images/SampleImage.svg\",\"SampleText\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"},{\"SampleHeading\":\"Lorem ipsum 2\",\"SampleImage\":\"/ctrllib/image/images/SampleImage.svg\",\"SampleText\":\"Suspendisse enim metus, tincidunt quis lobortis a, fringilla dignissim neque.\"},{\"SampleHeading\":\"Lorem ipsum 3\",\"SampleImage\":\"/ctrllib/image/images/SampleImage.svg\",\"SampleText\":\"Ut pharetra a dolor ac vehicula.\"},{\"SampleHeading\":\"Lorem ipsum 4\",\"SampleImage\":\"/ctrllib/image/images/SampleImage.svg\",\"SampleText\":\"Vestibulum dui felis, fringilla nec mi sed, tristique dictum nisi.\"}]",
+      "OriginalName": "CustomGallerySample",
+      "OrderedColumnNames": [
+        "SampleImage",
+        "SampleHeading",
+        "SampleText"
+      ]
+    },
+    {
+      "Name": "DropDownSample",
+      "Schema": "*[Value:s]",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "StaticDataSourceInfo",
+      "OriginalSchema": "*[Value:s]",
+      "Data": "[{\"Value\":\"1\"},{\"Value\":\"2\"},{\"Value\":\"3\"}]",
+      "OriginalName": "DropDownSample",
+      "OrderedColumnNames": [
+        "Value"
+      ]
+    }
+  ]
+}
