@@ -1,5 +1,10 @@
 # Equipment Request App
-An application which allows users to request new equipment and devices. Made for Rogers Electric while I was the IT intern. Implemented agile software engineering approaches and strategies. Worked closely with a test group and a team to get user feedback and define requirements for the application. 
+
+### Story
+As an IT Intern at Rogers Electric I was tasked with developing an equipment request application which streamlined how IT processed inventory requests. I worked closely with the IT team in order to complete this application as well as several test groups within the company through several testing periods.
+
+### Summary
+An application which allows users/employees to request new equipment and devices. Requests are formatted and sent to the  IT help-desk as a support ticket in Jira. Implemented agile software engineering approaches and strategies.
 
 Made with Microsoft Power Apps, Power Fx and Power Automate.
 
