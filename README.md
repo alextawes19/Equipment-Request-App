@@ -1,4 +1,4 @@
-# Equipment Request App
+# Equipment Request App :computer:
 
 ### Story
 As an IT Intern at Rogers Electric I was tasked with developing an equipment request application which streamlined how IT processed inventory requests. I worked closely with the IT team in order to complete this application as well as several test groups within the company through several testing periods.
